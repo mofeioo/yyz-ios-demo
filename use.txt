@@ -1,0 +1,2 @@
+4、把该库下载到Xcode中
+终端输入：$ pod install
