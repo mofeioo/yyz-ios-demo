@@ -1,18 +1,7 @@
-//
-//  ViewController.m
-//  1UITableView
-//
-//  Created by Jones on 10/7/16.
-//  Copyright © 2016 Jones. All rights reserved.
-//
-// 1 UITableView = 表格＋视图
-// 2 UITableView cell N行单列
-// 3 滚动 ：UIScrollView
 #import "ViewController.h"
+#import "Datas.h"
 
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>{
-    UITableView *tableView;
-}
+@interface ViewController ()
 
 @end
 
@@ -20,46 +9,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 20, 414, 600)];
     
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 414, 600)];
-    imageView.image = [UIImage imageNamed:@"1.jpg"];
-    imageView.contentMode = UIViewContentModeScaleToFill;
-    tableView.backgroundView = imageView;
-    
-    [self.view addSubview:tableView];
-    //  dataSource：数据源 delegate：控制
-    tableView.dataSource = self;
-    tableView.delegate = self;
-    
+    Datas *goods1 = [Datas initWithName:@"薇恩" andicon:@"vn.png" anddees:@"让我们来猎杀那些陷入黑暗中的人吧。"];
+
+    _arrayHeros = [[NSMutableArray alloc]initWithObjects:goods1, nil];
 }
-#pragma mark - TableView Delegate
-// 部分 组
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
-// 多少行
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+
+#pragma mark 这一组里面有多少行
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return _arrayHeros.count;
 }
-// 每行内容
--(UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-    cell.textLabel.text = @"hello";
+
+#pragma mark 返回第indexPath这行对应的内容
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     
-    
-    NSString *text2 =  @"sbsbsbs";
-    cell.textLabel.text=text2;
-    
-    
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
+    Datas *he = [_arrayHeros objectAtIndex:indexPath.row];
+    cell.textLabel.text = he.name;  //设置名字
+    cell.detailTextLabel.text = he.desc;  //设置描述
+    cell.imageView.image =[UIImage imageNamed:he.icon]; //设置图片
     return cell;
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - 代理方法
+#pragma mark 返回indexPath这行cell的高度
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 45;
 }
-
-
+#pragma mark 选中一行响应事件
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    
+}
 @end
