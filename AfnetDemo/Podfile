@@ -1,0 +1,4 @@
+platform :ios, ‘9.0’
+target 'AfnetDemo' do
+pod 'AFNetworking', '~> 3.1.0'
+end
