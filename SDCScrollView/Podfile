@@ -1,0 +1,4 @@
+platform :ios, ‘8.0’
+target ‘SDCScrollView’ do
+pod 'SDCycleScrollView', '~> 1.75'
+ pod 'MJRefresh', '~> 3.1.15.3'end

@@ -8,6 +8,7 @@
 
 // 1 数据加载 2 UITableView 3 数据展示 MVC
 #import "ViewController.h"
+#import <MJRefresh/MJRefresh.h>
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>{
     NSArray *_saintArray;
@@ -39,13 +40,54 @@
     [self.view addSubview:butonBack];
     
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 60, self.view.frame.size.width, self.view.frame.size.height)];
+    
+    [self setupRefresh];
+    //_tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    //}];
+    
+    
     [self.view addSubview:_tableView];
     //分割线类型
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.dataSource = self;
     _tableView.delegate = self;
+    
+    
+    
 }
 
+- (void)setupRefresh {
+    
+    //创建一个下拉刷新控件 在开始刷新后会调用此block
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        //加载数据（包括刷新tableView）
+//        [self loadNewTopics];
+//        //结束刷新
+//        [self.tableView.mj_header endRefreshing];
+        
+    }];
+    
+    //自动改变透明度 （当控件被导航条挡住后不显示）
+    header.automaticallyChangeAlpha = YES;
+    
+    // 设置各种状态下的刷新文字
+    [header setTitle:@"下拉可以刷新" forState:MJRefreshStateIdle];
+    [header setTitle:@"松开立即刷新" forState:MJRefreshStatePulling];
+    [header setTitle:@"正在刷新..." forState:MJRefreshStateRefreshing];
+    
+    // 设置字体
+    header.stateLabel.font = [UIFont systemFontOfSize:13];
+    header.lastUpdatedTimeLabel.font = [UIFont systemFontOfSize:13];
+    
+    // 设置颜色
+    header.stateLabel.textColor = [UIColor grayColor];
+    header.lastUpdatedTimeLabel.textColor = [UIColor blueColor];
+    
+    //初始化时开始刷新
+    //[header beginRefreshing];
+    [header endRefreshingCompletionBlock];
+    _tableView.mj_header = header;
+}
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;

@@ -1,0 +1,4 @@
+platform :ios, ‘8.0’
+target ‘UICollectionView’ do
+pod 'SDCycleScrollView', '~> 1.75'
+end

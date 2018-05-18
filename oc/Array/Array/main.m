@@ -26,5 +26,12 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%lu",nameArray.count );
         //常用操作
     }
+    NSMutableArray *_goodsarray = [@[] mutableCopy];
+    for(int i=0;i<20;i++){
+       
+        _goodsarray[i]=@"商品";
+        
+    }
+    NSLog(@"%@",_goodsarray);
     return 0;
 }

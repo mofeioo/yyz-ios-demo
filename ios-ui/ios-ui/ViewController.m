@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import <IQKeyboardManager/IQKeyboardManager.h>
 @interface ViewController ()
 
 @end
@@ -289,8 +289,7 @@
 //    [self.view addSubview:Button];
     
     
-    
-//
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;//
     [self loginTitle];
 
     

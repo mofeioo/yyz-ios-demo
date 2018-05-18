@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35D88182BA3CBA97008CA5FA /* libPods-ios-ui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A74F05BA5A6CCAE3C45C8D5 /* libPods-ios-ui.a */; };
 		C42E5C3620A17EE400984071 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C42E5C3520A17EE400984071 /* main.m */; };
 		C42E5C3920A17EE400984071 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C42E5C3820A17EE400984071 /* AppDelegate.m */; };
 		C42E5C3C20A17EE400984071 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C42E5C3B20A17EE400984071 /* ViewController.m */; };
@@ -15,7 +16,6 @@
 		C42E5C4420A17EE400984071 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42E5C4220A17EE400984071 /* LaunchScreen.storyboard */; };
 		C42E5C4F20A17EE400984071 /* ios_uiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C42E5C4E20A17EE400984071 /* ios_uiTests.m */; };
 		C42E5C5A20A17EE400984071 /* ios_uiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C42E5C5920A17EE400984071 /* ios_uiUITests.m */; };
-		C4AB95ED20A28C4700E54DD5 /* image in Resources */ = {isa = PBXBuildFile; fileRef = C4AB95EC20A28C4700E54DD5 /* image */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A74F05BA5A6CCAE3C45C8D5 /* libPods-ios-ui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios-ui.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		858F8B692AC2AEFDD978F4AA /* Pods-ios-ui.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-ui.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-ui/Pods-ios-ui.debug.xcconfig"; sourceTree = "<group>"; };
 		C42E5C3120A17EE400984071 /* ios-ui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-ui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42E5C3520A17EE400984071 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C42E5C3720A17EE400984071 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,7 +54,7 @@
 		C42E5C5520A17EE400984071 /* ios-uiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-uiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42E5C5920A17EE400984071 /* ios_uiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ios_uiUITests.m; sourceTree = "<group>"; };
 		C42E5C5B20A17EE400984071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4AB95EC20A28C4700E54DD5 /* image */ = {isa = PBXFileReference; lastKnownFileType = folder; name = image; path = "../../../../IOS学习计划/基本控件练手/image"; sourceTree = "<group>"; };
+		C7A729E92009186AC0021C26 /* Pods-ios-ui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-ui.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-ui/Pods-ios-ui.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35D88182BA3CBA97008CA5FA /* libPods-ios-ui.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22E7CEB628D57827AF775E7D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				858F8B692AC2AEFDD978F4AA /* Pods-ios-ui.debug.xcconfig */,
+				C7A729E92009186AC0021C26 /* Pods-ios-ui.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		97BD0A868F1FFDABC6D2C2AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A74F05BA5A6CCAE3C45C8D5 /* libPods-ios-ui.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C42E5C2820A17EE400984071 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +107,8 @@
 				C42E5C4D20A17EE400984071 /* ios-uiTests */,
 				C42E5C5820A17EE400984071 /* ios-uiUITests */,
 				C42E5C3220A17EE400984071 /* Products */,
+				22E7CEB628D57827AF775E7D /* Pods */,
+				97BD0A868F1FFDABC6D2C2AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,7 +125,6 @@
 		C42E5C3320A17EE400984071 /* ios-ui */ = {
 			isa = PBXGroup;
 			children = (
-				C4AB95EC20A28C4700E54DD5 /* image */,
 				C42E5C3720A17EE400984071 /* AppDelegate.h */,
 				C42E5C3820A17EE400984071 /* AppDelegate.m */,
 				C42E5C3A20A17EE400984071 /* ViewController.h */,
@@ -150,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C42E5C5E20A17EE400984071 /* Build configuration list for PBXNativeTarget "ios-ui" */;
 			buildPhases = (
+				1C23DB21E9D834C5C84B0B59 /* [CP] Check Pods Manifest.lock */,
 				C42E5C2D20A17EE400984071 /* Sources */,
 				C42E5C2E20A17EE400984071 /* Frameworks */,
 				C42E5C2F20A17EE400984071 /* Resources */,
+				03FAE9F21B425FC8FB00E09D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,7 +272,6 @@
 				C42E5C4420A17EE400984071 /* LaunchScreen.storyboard in Resources */,
 				C42E5C4120A17EE400984071 /* Assets.xcassets in Resources */,
 				C42E5C3F20A17EE400984071 /* Main.storyboard in Resources */,
-				C4AB95ED20A28C4700E54DD5 /* image in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +290,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03FAE9F21B425FC8FB00E09D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ios-ui/Pods-ios-ui-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-ui/Pods-ios-ui-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1C23DB21E9D834C5C84B0B59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ios-ui-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C42E5C2D20A17EE400984071 /* Sources */ = {
@@ -417,6 +478,7 @@
 		};
 		C42E5C5F20A17EE400984071 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 858F8B692AC2AEFDD978F4AA /* Pods-ios-ui.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ios-ui/Info.plist";
@@ -428,6 +490,7 @@
 		};
 		C42E5C6020A17EE400984071 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7A729E92009186AC0021C26 /* Pods-ios-ui.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ios-ui/Info.plist";

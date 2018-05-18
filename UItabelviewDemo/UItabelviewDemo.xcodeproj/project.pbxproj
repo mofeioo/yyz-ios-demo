@@ -17,6 +17,7 @@
 		824A4C1A20AD1900009AD1EA /* UItabelviewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 824A4C1920AD1900009AD1EA /* UItabelviewDemoUITests.m */; };
 		824A4C2820AD1915009AD1EA /* image in Resources */ = {isa = PBXBuildFile; fileRef = 824A4C2720AD1915009AD1EA /* image */; };
 		824A4C2A20AD192A009AD1EA /* goods.plist in Resources */ = {isa = PBXBuildFile; fileRef = 824A4C2920AD192A009AD1EA /* goods.plist */; };
+		D05EF7BFCF59894EFE43CC26 /* libPods-UItabelviewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2922A2B07BDA963502E7FB8 /* libPods-UItabelviewDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,9 @@
 		824A4C1B20AD1900009AD1EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		824A4C2720AD1915009AD1EA /* image */ = {isa = PBXFileReference; lastKnownFileType = folder; name = image; path = ../../../../../../Downloads/image; sourceTree = "<group>"; };
 		824A4C2920AD192A009AD1EA /* goods.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = goods.plist; path = ../../../../../../Downloads/goods.plist; sourceTree = "<group>"; };
+		C2922A2B07BDA963502E7FB8 /* libPods-UItabelviewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UItabelviewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEFC65A398213583C8FAD09A /* Pods-UItabelviewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UItabelviewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-UItabelviewDemo/Pods-UItabelviewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		E364F62C0EF71435E954E28D /* Pods-UItabelviewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UItabelviewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UItabelviewDemo/Pods-UItabelviewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D05EF7BFCF59894EFE43CC26 /* libPods-UItabelviewDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		616E9E60C332E7DCD6D058BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2922A2B07BDA963502E7FB8 /* libPods-UItabelviewDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		824A4BE820AD1900009AD1EA = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +102,8 @@
 				824A4C0D20AD1900009AD1EA /* UItabelviewDemoTests */,
 				824A4C1820AD1900009AD1EA /* UItabelviewDemoUITests */,
 				824A4BF220AD1900009AD1EA /* Products */,
+				D92C23763F95843CBB743D10 /* Pods */,
+				616E9E60C332E7DCD6D058BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +161,15 @@
 			path = UItabelviewDemoUITests;
 			sourceTree = "<group>";
 		};
+		D92C23763F95843CBB743D10 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E364F62C0EF71435E954E28D /* Pods-UItabelviewDemo.debug.xcconfig */,
+				CEFC65A398213583C8FAD09A /* Pods-UItabelviewDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 824A4C1E20AD1900009AD1EA /* Build configuration list for PBXNativeTarget "UItabelviewDemo" */;
 			buildPhases = (
+				5E6967E11CAED7682E3C3E87 /* [CP] Check Pods Manifest.lock */,
 				824A4BED20AD1900009AD1EA /* Sources */,
 				824A4BEE20AD1900009AD1EA /* Frameworks */,
 				824A4BEF20AD1900009AD1EA /* Resources */,
+				8F2F23D7B281C9F7BCEA2903 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,6 +298,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E6967E11CAED7682E3C3E87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UItabelviewDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F2F23D7B281C9F7BCEA2903 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-UItabelviewDemo/Pods-UItabelviewDemo-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UItabelviewDemo/Pods-UItabelviewDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		824A4BED20AD1900009AD1EA /* Sources */ = {
@@ -421,6 +486,7 @@
 		};
 		824A4C1F20AD1900009AD1EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E364F62C0EF71435E954E28D /* Pods-UItabelviewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UItabelviewDemo/Info.plist;
@@ -432,6 +498,7 @@
 		};
 		824A4C2020AD1900009AD1EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEFC65A398213583C8FAD09A /* Pods-UItabelviewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UItabelviewDemo/Info.plist;

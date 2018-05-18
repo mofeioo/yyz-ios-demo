@@ -1,0 +1,4 @@
+platform :ios, ‘8.0’
+target ‘ios-ui’ do
+pod 'IQKeyboardManager', '~> 6.0.3'
+end
