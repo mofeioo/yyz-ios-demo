@@ -85,7 +85,8 @@
     
     //初始化时开始刷新
     //[header beginRefreshing];
-    [header endRefreshingCompletionBlock];
+    //[header endRefreshingCompletionBlock];
+    
     _tableView.mj_header = header;
 }
 
